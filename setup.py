@@ -13,7 +13,7 @@ setup(
   version = "1.0",
   packages = [],
   scripts = ["scripts/puush"],
-  install_requires = ["docopt", "requests"],
+  install_requires = ["docopt", "requests", "notify2"],
   author = "Felix \"KoffeinFlummi\" Wiegand",
   author_email = "koffeinflummi@gmail.com",
   description = "Python implementation of puush. For Linux.",

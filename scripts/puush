@@ -27,6 +27,8 @@ import subprocess as sp
 import requests
 import docopt
 
+import notify2
+
 
 APIURL = "https://puush.me/api/up"
 VERSION = "1.0"
@@ -96,6 +98,9 @@ def main(args):
             return 3
 
         print(url)
+        notify2.init('puush')
+        notif = notify2.Notification('puush', url)
+        notif.show()
 
         if args["--clipboard"]:
             try:
